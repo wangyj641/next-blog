@@ -3,12 +3,12 @@ import { allPosts } from 'contentlayer/generated'
 import dayjs from "dayjs";
 
 export const generateMetadata = ({ params }) => {
-  return { 
-    title: "博客列表",
-    description: "这是博客列表页面",
+  return {
+    title: "Yongjun Wang blog",
+    description: "Full stack development",
     openGraph: {
-      title: '博客列表',
-      description: '这是博客列表页面'
+      title: 'Tech blog',
+      description: 'React/Next.js'
     }
   }
 }
@@ -33,8 +33,8 @@ export default function Home() {
     <div className="mx-auto max-w-xl py-8">
       <h1 className="mb-8 text-center text-2xl font-black">My Blog List</h1>
       {allPosts.map((post, idx) => (
-      <PostCard key={idx} {...post} />
-    ))}
+        <PostCard key={idx} {...post} />
+      ))}
     </div>
   )
 }
